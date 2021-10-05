@@ -1,4 +1,9 @@
 @Library('Shared-Library')_
+
+import com.app.MavenUtil
+
+
+def utils = new MavenUtil(this)
 pipeline {
    agent any
     stages {
@@ -19,7 +24,10 @@ pipeline {
     	}
 	stage ('MavenOps') {
 	        steps {
-		       sh '/opt/apache-maven-3.6.3/bin/mvn clean install'
+		      script {
+				
+				utils.mvn 'clean package'
+			  }
             }
         } 
 	stage ('Tempertaure conversion') {
