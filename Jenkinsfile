@@ -1,4 +1,4 @@
-@Library('Shared-Library.axa')_
+@Library('Shared-Library')_
 
 import com.app.MavenUtil
 
