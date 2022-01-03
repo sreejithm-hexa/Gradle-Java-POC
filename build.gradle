@@ -36,9 +36,9 @@ plugins {
    id "org.sonarqube" version "3.3"
 }
 
-application {
+/*application {
     mainClassName = 'hello.HelloWorld'
-}
+}*/
 
 // tag::repositories[]
 repositories {
