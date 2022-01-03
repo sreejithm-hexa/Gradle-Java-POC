@@ -33,6 +33,7 @@ plugins {
    id 'application'
    id 'base'
    id 'groovy'
+   id "org.sonarqube" version "9.2.4"
 }
 
 application {
