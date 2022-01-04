@@ -37,8 +37,8 @@ pipeline {
 	}
 	stage('SonarQube analysis') {
 		steps {
-    			withSonarQubeEnv('sonarqube-9.2.4') { // Will pick the global server connection you have configured
-      				sh './gradlew sonarqube'
+    			withSonarQubeEnv('sonarqube') { // Will pick the global server connection you have configured
+      				sh '/opt/gradle/gradle-6.4.1/bin/gradle sonarqube'
    		 	}
 		}
   	}
