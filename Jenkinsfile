@@ -22,14 +22,14 @@ pipeline {
 		       Execute('test')
             }
     	}
-	/*stage ('MavenOps') {
+	stage ('MavenOps') {
 	        steps {
 		      script {
 				
 				utils.mvn 'clean package'
 			  }
-            }
-        }*/
+                }
+        }
 	stage ('Tempertaure conversion') {
 		steps {
 			temp(98)
